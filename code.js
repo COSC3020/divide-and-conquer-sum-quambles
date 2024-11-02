@@ -20,12 +20,12 @@ function divideAndConquerSum(arr) {
         sum += divideAndConquerSum(arr.slice(2 * subSize));
     } else if (arr.length % 3 === 1) { // Middle subarray is larger
         sum += divideAndConquerSum(arr.slice(0, subSize));
-        sum += divideAndConquerSum(arr.slice(subSize, subSize + 1 + subSize));
-        sum += divideAndConquerSum(arr.slice(subSize + 1 + subSize));
+        sum += divideAndConquerSum(arr.slice(subSize, (2 * subSize) + 1));
+        sum += divideAndConquerSum(arr.slice((2 * subSize) + 1));
     } else if (arr.length % 3 === 2) { // First and last subarrays are larger
         sum += divideAndConquerSum(arr.slice(0, subSize + 1));
-        sum += divideAndConquerSum(arr.slice(subSize + 1, subSize + 1 + subSize));
-        sum += divideAndConquerSum(arr.slice(subSize + 1 + subSize));
+        sum += divideAndConquerSum(arr.slice(subSize + 1, (2 * subSize) + 1));
+        sum += divideAndConquerSum(arr.slice((2 * subSize) + 1));
     }
 
     return sum;
