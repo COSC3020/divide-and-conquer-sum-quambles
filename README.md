@@ -25,3 +25,14 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+
+The array is divided into 3 subarrays, and a recursive call is performed on each
+subarray. This makes our recurrence relation:
+
+  $T(n) = 3T(n/3) + n$
+  
+  $T(n) = 3^iT(n/3^i)+in$
+  
+  $T(n) =$ $\Theta$ $(nlog(n))$
+
