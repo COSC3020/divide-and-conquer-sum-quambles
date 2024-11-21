@@ -34,5 +34,5 @@ subarray. This makes our recurrence relation:
   
   $T(n) = 3^iT(n/3^i)+in$
   
-  $T(n) = theta(nlog(n))$
+  $T(n) = $\theta$(nlog(n))$
 
