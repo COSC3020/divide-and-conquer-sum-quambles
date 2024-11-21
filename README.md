@@ -26,7 +26,11 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
-Merge-sort typically has a recurrence relation of $T(n) = 2T(n/2) + O(n)$ due to
-the fact that the array was getting divided into halves. This implementation of
-merge-sort, however has a recurrence relation of $T(n) = 3T(n/3) + O(n)$ because
-the array is divided into thirds.
+
+The array is divided into 3 subarrays, and a recursive call is performed on each
+subarray. This makes our recurrence relation:
+
+  $T(n) = 3T(n/3) + n$
+  $T(n) = 3^iT(n/3^i)+in$
+  $T(n) = nlog(n)$
+
