@@ -31,6 +31,8 @@ The array is divided into 3 subarrays, and a recursive call is performed on each
 subarray. This makes our recurrence relation:
 
   $T(n) = 3T(n/3) + n$
+  
   $T(n) = 3^iT(n/3^i)+in$
+  
   $T(n) = nlog(n)$
 
